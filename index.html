@@ -1443,6 +1443,23 @@
       }
     }
 
+    /* 링크 아이콘 */
+    .proj-content-title-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .proj-link-icon {
+        margin-left: 10px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .proj-link-img {
+        width: 20px;
+        height: 20px;
+    }
 
     </style>
   </head>
@@ -1722,11 +1739,11 @@
             <div class="education-content w-full">
               <div class="education-name font-bold clickable" onclick="window.open('https://spartacodingclub.kr', '_blank')">스파르타 코딩클럽</div>
               <p class="education-detail font-regular">
-                2024.7 ~ / 온라인 교육
+                온라인 교육
               </p>
               <div class="education-name font-bold clickable" onclick="window.open('https://www.udemy.com/', '_blank')" >Udemy</div>
-              <p class="education-detail font-regular">상시 / 온라인 교육</p>
-              <a>
+              <p class="education-detail font-regular">온라인 교육</p>
+              
               <div
                 class="education-name font-bold clickable"
                 onclick="window.open('https://nomadcoders.co/', '_blank')"
@@ -1734,7 +1751,7 @@
                 Nomad Coders
               </div>
               
-              <p class="education-detail font-regular">상시 / 온라인 교육</p>
+              <p class="education-detail font-regular">온라인 교육</p>
               <div class="education-name font-bold">서강대학교</div>
               <p class="education-detail font-regular">
                 수학+컴퓨터과학 / 서울시
@@ -1777,7 +1794,7 @@
                 <div class="exp-div">
                     <div class="exp-title">
                         <img class="exp-img svg-filter" src="image/exp.svg" />
-                        <div class="exp-text font-bold">EXPERIENCE</div>
+                        <div class="exp-text font-bold">EXPERIENCE (Total 5+ years)</div>
                     </div>
                     <div class="exp-cards-container">
                        <div class="exp-card-frame flex-center size-full">
@@ -1788,7 +1805,7 @@
                                 <div class="exp-card-company font-bold">
                                     Trinity Lab
                                 </div>
-                                <div class="exp-card-term">2021.06~2023.01</div>
+                                <div class="exp-card-term">2024.03~현재</div>
                                 <div class="exp-card-team">
                                     <div class="exp-card-team-name font-bold">
                                         공동대표 / 풀스택 개발자
@@ -1918,7 +1935,16 @@
                         <div class="proj-title-text font-bold">PROJECT</div>
                     </div>
                     <div class="proj-container">
-                        <div class="proj" onclick="location.href='project.html'">
+                      <div class="proj" onclick="location.href='project.html'">
+                            <img src="image/catbot_logo.webp" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                                <div class="proj-content-title font-bold">Catbot</div>
+                                <p class="proj-content-text font-regular">
+                                    AI 를 활용한 사주와 타로상담 챗봇입니다. 귀여운 고양이 선생님이 운세 풀이를 해주고 끝없이 계속되는 질문에도 지치지 않고 답변해 줍니다. 이 서비스는 명리학과 타로 전문가들과 함께 수개월에 걸친 연구 끝에 개발되었으며, 개발자 본인도 수년에 걸쳐 명리학과 타로를 열심히 공부했습니다. 타로는 유니버셜 타로를 활용한 기본적인 답변을 제공하며, 사주풀이 결과는 이미지와 총론, 그리고 질의응답 채팅으로 구성했습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="proj" onclick="location.href='project_zennecting.html'">
                             <img src="image/zennecting_logo.png" alt="프로젝트 이미지" class="proj-main-img" />
                             <div class="proj-content">
                                 <div class="proj-content-title font-bold">Zennecting</div>
@@ -1927,20 +1953,32 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="proj" onclick="location.href='project2.html'">
-                            <img src="image/p2.png" alt="프로젝트 이미지" class="proj-main-img" />
+                        <div class="proj" onclick="location.href='project_vegan.html'">
+                            <img src="image/vegan_journey_screenshot.png" alt="프로젝트 이미지" class="proj-main-img" />
                             <div class="proj-content">
-                                <div class="proj-content-title font-bold">
-                                    프로젝트2
-                                </div>
+                               <div class="proj-content-title-wrapper">
+                                  <div class="proj-content-title font-bold">Vegan Journey</div>
+                                  <a href="https://vegan-journey.trinity-app.com/" target="_blank" class="proj-link-icon" onclick="event.stopPropagation();">
+                                      <img src="image/external-link.svg" alt="바로가기" class="proj-link-img">
+                                  </a>
+                              </div>
                                 <p class="proj-content-text font-regular">
-                                    CodeCollaborate는 개발자들을 위한 협업 플랫폼입니다.
-                                    개발자들이 프로젝트를 함께 작업하고 코드 리뷰, 실시간 채팅,
-                                    이슈 트래킹 기능을 활용할 수 있도록 설계되었습니다. React와
-                                    Node.js를 사용하여 개발된 이 웹 애플리케이션은 효율적인 협과
-                                    원활한 커뮤니케이션을 지원합니다. 이를 통해 개발자들은 전
-                                    세계 어디서든 팀워크를 강화하고 프로젝트를 성공적으로 완수할
-                                    수 있습니다.
+                                    Vegan Journey 는 AI로 생성한 이미지와 레시피, 그리고 세계의 비건여행 코스를 제공하는 웹사이트입니다. 또한 AI 를 사용해서 레시피를 생성할 수 있습니다. 컨텐츠는 한글과 영어로 제공합니다. Next.js 로 제작했으며, 노션 DB와 API 를 백엔드로 활용했습니다. ChatGPT 를 사용하여 컨텐츠를 생성하고, OpenAI API 를 사용해서 레시피를 생성합니다.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="proj" onclick="location.href='project_aroma.html'">
+                            <img src="image/aroma_journey_screenshot.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                                <div class="proj-content-title-wrapper">
+                                  <div class="proj-content-title font-bold">Aroma Journey</div>
+                                  <a href="https://aroma.trinity-app.com/" target="_blank" class="proj-link-icon" onclick="event.stopPropagation();">
+                                      <img src="image/external-link.svg" alt="바로가기" class="proj-link-img">
+                                  </a>
+                              </div>
+                                <p class="proj-content-text font-regular">
+                                    Aroma Journey 는 AI로 생성한 이미지와 에센셜 오일에 대한 설명, 그리고 증상별 에센셜 오일 추천을 제공하는 웹사이트입니다. 컨텐츠는 한글과 영어로 제공합니다. Next.js 로 제작했으며, 노션 DB와 API 를 백엔드로 활용했습니다. ChatGPT 를 사용하여 컨텐츠를 생성했습니다. 
                                 </p>
                             </div>
                         </div>
