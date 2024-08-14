@@ -8,15 +8,16 @@
       property="og:url"
       content="https://scccurri.github.io/portfolio/index.html"
     />
-    <meta property="og:title" content="Jiwung Choi's Resume" />
+    <meta property="og:title" content="최지웅 이력서" />
     <meta property="og:image" content="image/OGimage.png" />
-    <meta property="og:description" content="This is Jiwung Choi's resume." />
+    <meta property="og:description" content="최지웅 이력서입니다." />
     <meta property="og:site_name" content="SCC Portfolio" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <title>Jiwung Choi's Resume</title>
+    <title>최지웅 이력서</title>
+
     <style>
       @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
@@ -163,7 +164,6 @@
         letter-spacing: 0;
         line-height: normal;
         word-break: break-word;
-        /* 긴 이름이 있을 경우 줄바꿈 */
       }
 
       .sub-name {
@@ -176,24 +176,20 @@
         letter-spacing: 0;
         line-height: normal;
         word-break: break-word;
-        /* 긴 직함이 있을 경우 줄바꿈 */
       }
 
       .info {
         position: relative;
         width: 15rem;
         margin-top: 2.5rem;
-        /* info div의 상단 마진 유지 */
         margin-left: 2.25rem;
         padding-bottom: 1rem;
-        /* 하단에 여유 공간 추가 */
       }
 
       .info-detail {
         position: relative;
         display: flex;
         align-items: flex-start;
-        /* 세로 정렬을 위쪽으로 변경 */
         margin-bottom: 0.625rem;
       }
 
@@ -202,7 +198,6 @@
         height: 1rem;
         margin-right: 0.5625rem;
         flex-shrink: 0;
-        /* 아이콘 크기 유지 */
       }
 
       .info-detail-exp {
@@ -211,9 +206,7 @@
         letter-spacing: 0;
         line-height: 1rem;
         word-break: break-word;
-        /* 긴 텍스트의 경우 줄바꿈 */
         flex-grow: 1;
-        /* 남은 공간 채우기 */
       }
 
       .strength-set {
@@ -221,7 +214,6 @@
         width: 14.9375rem;
         height: 5.75rem;
         margin-top: 1.5rem;
-        /* 상단 마진 조정 */
         margin-left: 2.25rem;
         display: flex;
         justify-content: space-between;
@@ -253,7 +245,6 @@
         width: 15.0625rem;
         height: 0.05rem;
         margin-top: 1.5rem;
-        /* 상단 마진 조정 */
         margin-left: 2.25rem;
         background: rgba(34, 36, 37, 0.2);
       }
@@ -262,7 +253,6 @@
         position: relative;
         width: 15.0625rem;
         margin-top: 1.5rem;
-        /* 상단 마진 조정 */
         margin-left: 2.25rem;
       }
 
@@ -458,243 +448,880 @@
         text-align: left;
       }
 
-      .exp-div {
-        position: relative;
-        width: 62.4rem;
-        margin: 3.1rem 0;
+      .clickable {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #0066cc;
       }
 
-      .proj-div {
-        position: relative;
-        width: 62.4rem;
-        margin: 3.1rem 0;
+      .clickable:hover {
+        color: #004080;
+      }
+              /* 메인 CSS */
+        .exp-div {
+            position: relative;
+            width: 62.4rem;
+            margin: 3.1rem 0;
+        }
+
+        .proj-div {
+            position: relative;
+            width: 62.4rem;
+            margin: 3.1rem 0;
+        }
+
+        .intro-logo {
+            height: auto;
+            max-width: 45rem;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+            aspect-ratio: attr(width) / attr(height);
+        }
+
+        .main-content {
+            width: calc(100% - 20.25rem);
+            margin-left: 2.5rem;
+        }
+
+        .intro-div {
+            width: 62.4375rem;
+            height: 29.4375rem;
+            border-radius: 0.939375rem;
+            overflow: hidden;
+            box-shadow: 0 0.250625rem 1.253125rem #00000033;
+            background: var(--highlight-color);
+            position: relative;
+        }
+
+        .intro-frame {
+            position: relative;
+            height: 29.4375rem;
+            background: linear-gradient(180deg,
+                    rgba(34, 36, 37, 0) 0%,
+                    var(--sub-organization-color) 100%);
+        }
+
+        .intro-logo {
+            position: absolute;
+            opacity: 20%;
+            width: 40.0703125rem;
+            height: 13.125rem;
+            top: 16.31875rem;
+            left: 7.875rem;
+        }
+
+        .intro-picture-frame {
+            position: absolute;
+            width: 22.25rem;
+            height: 22.25rem;
+            top: 3.578125rem;
+            left: 36.1875rem;
+            background-color: var(--highlight-color);
+        }
+
+        .intro-picture {
+            position: absolute;
+            width: 22.25rem;
+            height: 22.25rem;
+            top: 0;
+            left: 0;
+            object-position: center 20%;
+            object-fit: cover;
+        }
+
+        .intro-star {
+            position: absolute;
+            width: 6.5rem;
+            height: 6.5rem;
+            top: 4.5rem;
+            left: 32.90625rem;
+        }
+
+        .intro-content {
+            position: relative;
+            width: 29.1rem;
+            top: 7.4rem;
+            left: 3.3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .intro-quote {
+            width: 3.1rem;
+            height: 2.6rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .intro-text {
+            width: 28.8rem;
+            color: var(--main-font-color);
+            font-size: 2.3rem;
+            letter-spacing: 0;
+            line-height: normal;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text-detail {
+            width: 28.8rem;
+            color: var(--secondary-font-color);
+            font-size: 0.9rem;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .intro-row-line {
+            position: absolute;
+            width: 62.4rem;
+            height: 0.05rem;
+            top: 3.5rem;
+            left: 0;
+            background: var(--main-font-color);
+        }
+
+        .intro-column-line {
+            position: absolute;
+            width: 0.05rem;
+            height: 29.4rem;
+            top: 0;
+            left: 36.2rem;
+            background: var(--main-font-color);
+        }
+            /* 메인 CSS */
+    .exp-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .proj-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .intro-logo {
+      height: auto;
+      max-width: 45rem;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      aspect-ratio: attr(width) / attr(height);
+    }
+
+    .main-content {
+      width: calc(100% - 20.25rem);
+      margin-left: 2.5rem;
+    }
+
+    .intro-div {
+      width: 62.4375rem;
+      height: 29.4375rem;
+      border-radius: 0.939375rem;
+      overflow: hidden;
+      box-shadow: 0 0.250625rem 1.253125rem #00000033;
+      background: var(--highlight-color);
+      position: relative;
+    }
+
+    .intro-frame {
+      position: relative;
+      height: 29.4375rem;
+      background: linear-gradient(180deg,
+          rgba(34, 36, 37, 0) 0%,
+          var(--sub-organization-color) 100%);
+    }
+
+    .intro-logo {
+      position: absolute;
+      opacity: 20%;
+      width: 40.0703125rem;
+      height: 13.125rem;
+      top: 16.31875rem;
+      left: 7.875rem;
+    }
+
+    .intro-picture-frame {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 3.578125rem;
+      left: 36.1875rem;
+      background-color: var(--highlight-color);
+    }
+
+    .intro-picture {
+      position: absolute;
+      width: 22.25rem;
+      height: 22.25rem;
+      top: 0;
+      left: 0;
+      object-position: center 20%;
+      object-fit: cover;
+    }
+
+    .intro-star {
+      position: absolute;
+      width: 6.5rem;
+      height: 6.5rem;
+      top: 4.5rem;
+      left: 32.90625rem;
+    }
+
+    .intro-content {
+      position: relative;
+      width: 29.1rem;
+      top: 7.4rem;
+      left: 3.3rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-quote {
+      width: 3.1rem;
+      height: 2.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .intro-text {
+      width: 28.8rem;
+      color: var(--main-font-color);
+      font-size: 2.3rem;
+      letter-spacing: 0;
+      line-height: normal;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text-detail {
+      width: 28.8rem;
+      color: var(--secondary-font-color);
+      font-size: 0.9rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .intro-row-line {
+      position: absolute;
+      width: 62.4rem;
+      height: 0.05rem;
+      top: 3.5rem;
+      left: 0;
+      background: var(--main-font-color);
+    }
+
+    .intro-column-line {
+      position: absolute;
+      width: 0.05rem;
+      height: 29.4rem;
+      top: 0;
+      left: 36.2rem;
+      background: var(--main-font-color);
+    }
+
+    /* 경력 DIV */
+    .exp-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .exp-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.3rem;
+    }
+
+    .exp-img {
+      width: 1.7rem;
+      height: 1.4rem;
+      margin-right: 0.5rem;
+    }
+
+    .exp-text {
+      color: var(--main-font-color);
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: normal;
+      text-align: center;
+    }
+
+    .exp-cards-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-card-frame {
+      position: relative;
+      padding: 0 4rem;
+      transition: transform 0.5s ease-in-out;
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+    }
+
+    .exp-card {
+      position: relative;
+      width: 19.7rem;
+      border-radius: 1rem;
+      background: var(--sub-organization-color);
+      padding: 0.8rem;
+      min-width: 33.33%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exp-card-period-wrapper {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-company {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-card-term {
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-team {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task-text {
+      font-size: 0.6rem;
+    }
+
+    .exp-card-proj {
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-proj-name {
+      font-size: 0.6rem;
+    }
+
+    .exp-card-task-term {
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-card-task-detail-text {
+      font-size: 0.6rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      width: 70%;
+      /* 하단 여백 추가 */
+    }
+
+    .exp-card-period-wrapper {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-period {
+      color: var(--highlight-color);
+      font-size: 0.6rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .exp-card-company {
+      text-align: center;
+      color: var(--main-font-color);
+      font-size: 1.2rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-card-term {
+      text-align: center;
+      color: var(--secondary-font-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+      margin: 0 auto 1rem;
+    }
+
+    .exp-card-team {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      height: 0.9rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-team-name {
+      color: var(--highlight-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      text-align: center;
+      letter-spacing: 0;
+      white-space: normal;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .exp-card-task {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .point {
+      margin-right: 0.5rem;
+      margin-top: 0.2rem;
+    }
+
+    .exp-card-task-text {
+      width: auto;
+      max-width: 14.3rem;
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+    }
+
+    .exp-card-task-term {
+      width: 100%;
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
+
+    .exp-card-proj {
+      width: fit-content;
+      min-width: 3.4rem;
+      min-height: 1.2rem;
+      height: 0.9rem;
+      border-radius: 0.4rem;
+      background: var(--main-organization-color);
+      margin: 0 auto 0.8rem;
+      padding: 0.1rem 0.5rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .exp-card-proj-name {
+      color: var(--highlight-color);
+      font-size: 0.7rem;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: 0;
+    }
+
+    .exp-card-task-detail {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .exp-card-task-detail-text {
+      color: var(--main-font-color);
+      font-size: 0.7rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      word-break: break-word;
+      margin-bottom: 1rem;
+    }
+        /* 프로젝트 div*/
+    .proj-div {
+      position: relative;
+      width: 62.4rem;
+      margin: 3.1rem 0;
+    }
+
+    .proj-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.9rem;
+      margin: 2rem 0;
+    }
+
+    .proj-title-img {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.6rem;
+    }
+
+    .proj-title-text {
+      color: var(--main-font-color);
+      font-size: 1.4rem;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .proj-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+      justify-content: space-between;
+    }
+
+    .proj {
+      width: calc(50% - 0.85rem);
+      height: auto;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-bottom: 1.6rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj:hover {
+      transform: scale(1.05);
+    }
+
+    .proj-main-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      background-color: var(--main-organization-color);
+      border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    .proj-content {
+      width: 100%;
+      height: auto;
+      border-radius: 0 0 0.9rem 0.9rem;
+      border: 0.1rem solid var(--main-organization-color);
+      padding: 1.3rem 1.6rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-content-title {
+      color: var(--main-font-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      word-break: break-word;
+    }
+
+    .proj-content-text {
+      color: var(--secondary-font-color);
+      font-size: 0.8rem;
+      line-height: 1.4;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+      flex-grow: 1;
+    }
+
+    /* Language */
+    .language-switch-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .language-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--main-organization-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .language-button:hover {
+      background-color: var(--sub-organization-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 64rem) {
+      .frame {
+        flex-direction: column;
+        padding: 1.2rem;
       }
 
-      .intro-logo {
-        height: auto;
-        max-width: 45rem;
-        display: block;
-        margin: 0 auto;
-        object-fit: contain;
-        aspect-ratio: attr(width) / attr(height);
+      .side-bar,
+      .main-content {
+        width: 100%;
+        max-width: 37.5rem;
+        margin: 0 auto 1.2rem;
+      }
+
+      .side-bar {
+        position: relative;
+        top: 0;
       }
 
       .main-content {
-        width: calc(100% - 20.25rem);
-        margin-left: 2.5rem;
+        margin-left: 0;
+      }
+
+      .exp-cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .exp-card {
+        margin-bottom: 1.2rem;
+      }
+
+      .proj-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+      }
+
+      .proj {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .background {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
+      .frame {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side-bar,
+      .intro-div,
+      .exp-div,
+      .proj-div {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      .side-bar {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .side-bar-logo,
+      .side-bar-profile,
+      .name-tag,
+      .info,
+      .strength-set,
+      .line,
+      .skill,
+      .license,
+      .education {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .education-text,
+      .skill-title-text,
+      .license-title {
+        position: absolute;
+      }
+
+      .skill-title-text,
+      .education-text,
+      .license-title {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: var(--font-family-bold);
+        text-align: left;
+      }
+
+      .license-title {
+        margin-left: 0;
+      }
+
+      .skill-title-img,
+      .education-img,
+      .license-img {
+        position: absolute;
+        left: 0;
+        margin-right: 10px;
+        /* display: none; 이 을 제거하거나 주석 처리 */
+      }
+
+      .skill-title,
+      .education-title,
+      .license {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        /* 아이콘과 텍스트의 높이에 맞게 조정 */
       }
 
       .intro-div {
-        width: 62.4375rem;
-        height: 29.4375rem;
+        width: 100%;
+        height: auto;
         border-radius: 0.939375rem;
         overflow: hidden;
         box-shadow: 0 0.250625rem 1.253125rem #00000033;
         background: var(--highlight-color);
         position: relative;
+        margin: 20px auto;
+        /* 추가: 모바일 화면에서 중앙 정렬 */
+        padding: 20px;
+        /* 추가: 내부 여백 추가 */
       }
 
       .intro-frame {
-        position: relative;
-        height: 29.4375rem;
-        background: linear-gradient(
-          180deg,
-          rgba(34, 36, 37, 0) 0%,
-          var(--sub-organization-color) 100%
-        );
+        text-align: center;
+        height: auto;
+        /* 수정: 높이를 자동으로 조정 */
+        background: none;
+        /* 수정: 배경 제거 */
       }
 
-      .intro-logo {
-        position: absolute;
-        opacity: 20%;
-        width: 40.0703125rem;
-        height: 13.125rem;
-        top: 16.31875rem;
-        left: 7.875rem;
-      }
-
-      .intro-picture-frame {
-        position: absolute;
-        width: 22.25rem;
-        height: 22.25rem;
-        top: 3.578125rem;
-        left: 36.1875rem;
-        background-color: var(--highlight-color);
-      }
-
-      .intro-picture {
-        position: absolute;
-        width: 22.25rem;
-        height: 22.25rem;
-        top: 0;
-        left: 0;
-        object-position: center 20%;
-        object-fit: cover;
-      }
-
+      .intro-logo,
+      .intro-picture-frame,
+      .intro-row-line,
+      .intro-column-line,
       .intro-star {
-        position: absolute;
-        width: 6.5rem;
-        height: 6.5rem;
-        top: 4.5rem;
-        left: 32.90625rem;
+        display: none;
       }
 
       .intro-content {
-        position: relative;
-        width: 29.1rem;
-        top: 7.4rem;
-        left: 3.3rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        color: #81898f;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        /* 추가: 내부 여백 추가 */
       }
 
       .intro-quote {
         width: 3.1rem;
         height: 2.6rem;
-        margin-bottom: 1.25rem;
+        margin: 1.25rem;
       }
 
       .intro-text {
-        width: 28.8rem;
-        color: var(--main-font-color);
-        font-size: 2.3rem;
-        letter-spacing: 0;
-        line-height: normal;
-        margin-bottom: 1.5rem;
+        font-size: 16px;
+        width: 100%;
+        word-wrap: break-word;
+        text-align: center;
+        /* 추가: 텍스트 중앙 정렬 */
       }
 
       .intro-text-detail {
-        width: 28.8rem;
-        color: var(--secondary-font-color);
-        font-size: 0.9rem;
-        letter-spacing: 0;
-        line-height: normal;
-      }
-
-      .intro-row-line {
-        position: absolute;
-        width: 62.4rem;
-        height: 0.05rem;
-        top: 3.5rem;
-        left: 0;
-        background: var(--main-font-color);
-      }
-
-      .intro-column-line {
-        position: absolute;
-        width: 0.05rem;
-        height: 29.4rem;
-        top: 0;
-        left: 36.2rem;
-        background: var(--main-font-color);
-      }
-
-      .exp-div {
-        position: relative;
-        width: 62.4rem;
-        margin: 3.1rem 0;
-      }
-
-      .exp-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.3rem;
-      }
-
-      .exp-img {
-        width: 1.7rem;
-        height: 1.4rem;
-        margin-right: 0.5rem;
-      }
-
-      .exp-text {
-        color: var(--main-font-color);
-        font-size: 1.4rem;
-        letter-spacing: 0;
-        line-height: normal;
+        font-size: 10px;
+        width: 100%;
+        word-wrap: break-word;
+        top: 7rem;
         text-align: center;
+        /* 추가: 텍스트 중앙 정렬 */
+      }
+
+      /* 경력 Div */
+      .exp-div {
+        margin: 20px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
+        align-items: flex-start;
       }
 
       .exp-cards-container {
         position: relative;
-        overflow: hidden;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
+        align-items: center;
       }
 
       .exp-card-frame {
-        position: relative;
-        padding: 0 4rem;
-        transition: transform 0.5s ease-in-out;
         display: flex;
-        align-items: stretch;
-        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        transition: transform 0.5s ease-in-out;
+        flex-direction: column;
+        /* 수정: 세로 배치 */
       }
 
       .exp-card {
-        position: relative;
-        width: 19.7rem;
-        border-radius: 1rem;
-        background: var(--sub-organization-color);
-        padding: 0.8rem;
-        min-width: 33.33%;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        transform: scale(1);
+        opacity: 1;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: left;
         display: flex;
         flex-direction: column;
-      }
-
-      .exp-card-period-wrapper {
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-company {
-        font-size: 1rem;
-        margin-bottom: 0.2rem;
-      }
-
-      .exp-card-term {
-        font-size: 0.6rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-team {
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-task {
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-task-text {
-        font-size: 0.6rem;
-      }
-
-      .exp-card-proj {
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-proj-name {
-        font-size: 0.6rem;
-      }
-
-      .exp-card-task-term {
-        font-size: 0.6rem;
-        margin-bottom: 0.3rem;
-      }
-
-      .exp-card-task-detail-text {
-        font-size: 0.6rem;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
-        width: 70%;
-        /* 하단 여백 추가 */
+        align-items: flex-start;
+        transition: all 0.5s ease-in-out;
+        flex: 0 0 100%;
       }
 
       .exp-card-period-wrapper {
         width: fit-content;
         min-width: 3.4rem;
-        min-height: 1.2rem;
+        height: 0.9rem;
         border-radius: 0.4rem;
         background: var(--main-organization-color);
-        margin: 0 auto 0.8rem;
+        margin: 0 auto 0.4rem;
         padding: 0.1rem 0.5rem;
         display: inline-flex;
         justify-content: center;
@@ -703,63 +1330,26 @@
 
       .exp-card-period {
         color: var(--highlight-color);
-        font-size: 0.6rem;
-        line-height: 1.2;
+        font-size: 0.5rem;
+        line-height: normal;
         white-space: nowrap;
         letter-spacing: 0;
       }
 
-      .exp-card-company {
-        text-align: center;
-        color: var(--main-font-color);
-        font-size: 1.2rem;
-        line-height: 1.4;
-        letter-spacing: 0;
-        word-break: break-word;
-        margin-bottom: 0.5rem;
-      }
-
-      .exp-card-term {
-        text-align: center;
-        color: var(--secondary-font-color);
-        font-size: 0.7rem;
-        line-height: 1.2;
-        letter-spacing: 0;
-        margin: 0 auto 1rem;
-      }
-
-      .exp-card-team {
-        width: fit-content;
-        min-width: 3.4rem;
-        min-height: 1.2rem;
-        height: 0.9rem;
-        border-radius: 0.4rem;
-        background: var(--main-organization-color);
-        margin: 0 auto 0.8rem;
-        padding: 0.1rem 0.5rem;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .exp-card-team-name {
-        color: var(--highlight-color);
-        font-size: 0.7rem;
-        line-height: 1.2;
-        text-align: center;
-        letter-spacing: 0;
-        white-space: normal;
-        word-break: break-word;
-        overflow-wrap: break-word;
-      }
-
-      .exp-card-task {
+      .exp-card-company,
+      .exp-card-term,
+      .exp-card-task-text,
+      .exp-card-task-term,
+      .exp-card-task-detail-text {
         width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .exp-card-task,
+      .exp-card-task-detail {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        margin-bottom: 0.8rem;
+        align-items: center;
       }
 
       .point {
@@ -767,566 +1357,117 @@
         margin-top: 0.2rem;
       }
 
-      .exp-card-task-text {
-        width: auto;
-        max-width: 14.3rem;
-        color: var(--main-font-color);
-        font-size: 0.7rem;
-        line-height: 1.4;
-        letter-spacing: 0;
-        word-break: break-word;
+      #card1,
+      #card3 {
+        display: none;
       }
 
-      .exp-card-task-term {
-        width: 100%;
-        color: var(--main-font-color);
-        font-size: 0.7rem;
-        line-height: 1.2;
-        white-space: nowrap;
-        letter-spacing: 0;
-        margin-bottom: 0.8rem;
-        text-align: center;
+      .exp-prev,
+      .exp-next {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        z-index: 10;
       }
 
-      .exp-card-proj {
-        width: fit-content;
-        min-width: 3.4rem;
-        min-height: 1.2rem;
-        height: 0.9rem;
-        border-radius: 0.4rem;
-        background: var(--main-organization-color);
-        margin: 0 auto 0.8rem;
-        padding: 0.1rem 0.5rem;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+      .exp-prev {
+        left: -15px;
       }
 
-      .exp-card-proj-name {
-        color: var(--highlight-color);
-        font-size: 0.7rem;
-        line-height: 1.2;
-        white-space: nowrap;
-        letter-spacing: 0;
-      }
-
-      .exp-card-task-detail {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-      }
-
-      .exp-card-task-detail-text {
-        color: var(--main-font-color);
-        font-size: 0.7rem;
-        line-height: 1.4;
-        letter-spacing: 0;
-        word-break: break-word;
-        margin-bottom: 1rem;
-      }
-
-      .proj-div {
-        position: relative;
-        width: 62.4rem;
-        margin: 3.1rem 0;
-      }
-
-      .proj-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.9rem;
-      }
-
-      .proj-title-img {
-        width: 1.6rem;
-        height: 1.6rem;
-        margin-right: 0.6rem;
-      }
-
-      .proj-title-text {
-        color: var(--main-font-color);
-        font-size: 1.4rem;
-        letter-spacing: 0;
-        line-height: normal;
+      .exp-next {
+        right: -15px;
       }
 
       .proj-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.7rem;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
       }
 
       .proj {
-        width: calc(50% - 0.85rem);
-        height: auto;
-        position: relative;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        margin-bottom: 1.6rem;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .proj:hover {
-        transform: scale(1.05);
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
       }
 
       .proj-main-img {
         width: 100%;
-        height: 200px;
+        height: auto;
         object-fit: cover;
-        background-color: var(--main-organization-color);
-        border-radius: 0.9rem 0.9rem 0 0;
+        border-radius: 15px 15px 0 0;
       }
 
       .proj-content {
         width: 100%;
         height: auto;
-        border-radius: 0 0 0.9rem 0.9rem;
-        border: 0.1rem solid var(--main-organization-color);
-        padding: 1.3rem 1.6rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
+        padding: 15px;
+        background-color: var(--sub-organization-color);
+        border-radius: 0 0 15px 15px;
       }
 
       .proj-content-title {
-        color: var(--main-font-color);
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
-        word-break: break-word;
+        font-size: 16px;
+        margin-bottom: 10px;
       }
 
       .proj-content-text {
-        color: var(--secondary-font-color);
-        font-size: 0.8rem;
+        font-size: 12px;
         line-height: 1.4;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 8;
-        -webkit-box-orient: vertical;
-        flex-grow: 1;
       }
 
-      @media (max-width: 64rem) {
-        .frame {
-          flex-direction: column;
-          padding: 1.2rem;
-        }
-
-        .side-bar,
-        .main-content {
-          width: 100%;
-          max-width: 37.5rem;
-          margin: 0 auto 1.2rem;
-        }
-
-        .side-bar {
-          position: relative;
-          top: 0;
-        }
-
-        .main-content {
-          margin-left: 0;
-        }
-
-        .exp-cards-container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .exp-card {
-          margin-bottom: 1.2rem;
-        }
-
-        .proj-container {
-          flex-direction: column;
-          align-items: center;
-          gap: 1.6rem;
-        }
-
-        .proj {
-          width: 100%;
-          max-width: 400px;
-          margin: 0 auto;
-        }
+      .info-detail {
+        justify-content: flex-start;
       }
 
-      @media screen and (max-width: 768px) {
-        body {
-          overflow-x: hidden;
-        }
-
-        .background {
-          padding: 20px;
-          display: flex;
-          justify-content: center;
-          width: 100%;
-          max-width: 100vw;
-          overflow-x: hidden;
-        }
-
-        .frame {
-          width: 100%;
-          max-width: 500px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .side-bar,
-        .intro-div,
-        .exp-div,
-        .proj-div {
-          position: static;
-          width: 100%;
-          max-width: 400px;
-          margin: 20px auto;
-        }
-
-        .side-bar {
-          padding: 20px;
-          text-align: center;
-        }
-
-        .side-bar-logo,
-        .side-bar-profile,
-        .name-tag,
-        .info,
-        .strength-set,
-        .line,
-        .skill,
-        .license,
-        .education {
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .education-text,
-        .skill-title-text,
-        .license-title {
-          position: absolute;
-        }
-
-        .skill-title-text,
-        .education-text,
-        .license-title {
-          display: flex;
-          align-items: center;
-          font-size: 14px;
-          font-family: var(--font-family-bold);
-          text-align: left;
-        }
-
-        .license-title {
-          margin-left: 0;
-        }
-
-        .skill-title-img,
-        .education-img,
-        .license-img {
-          position: absolute;
-          left: 0;
-          margin-right: 10px;
-          /* display: none; 이 을 제거하거나 주석 처리 */
-        }
-
-        .skill-title,
-        .education-title,
-        .license {
-          position: relative;
-          display: flex;
-          align-items: center;
-          height: 20px;
-          /* 아이콘과 텍스트의 높이에 맞게 조정 */
-        }
-
-        .intro-div {
-          width: 100%;
-          height: auto;
-          border-radius: 0.939375rem;
-          overflow: hidden;
-          box-shadow: 0 0.250625rem 1.253125rem #00000033;
-          background: var(--highlight-color);
-          position: relative;
-          margin: 20px auto;
-          /* 추가: 모바일 화면에서 중앙 정렬 */
-          padding: 20px;
-          /* 추가: 내부 여백 추가 */
-        }
-
-        .intro-frame {
-          text-align: center;
-          height: auto;
-          /* 수정: 높이를 자동으로 조정 */
-          background: none;
-          /* 수정: 배경 제거 */
-        }
-
-        .intro-logo,
-        .intro-picture-frame,
-        .intro-row-line,
-        .intro-column-line,
-        .intro-star {
-          display: none;
-        }
-
-        .intro-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          color: #81898f;
-          top: 0;
-          left: 0;
-          padding: 20px;
-          /* 추가: 내부 여백 추가 */
-        }
-
-        .intro-quote {
-          width: 3.1rem;
-          height: 2.6rem;
-          margin: 1.25rem;
-        }
-
-        .intro-text {
-          font-size: 16px;
-          width: 100%;
-          word-wrap: break-word;
-          text-align: center;
-          /* 추가: 텍스트 중앙 정렬 */
-        }
-
-        .intro-text-detail {
-          font-size: 10px;
-          width: 100%;
-          word-wrap: break-word;
-          top: 7rem;
-          text-align: center;
-          /* 추가: 텍스트 중앙 정렬 */
-        }
-
-        .exp-div {
-          margin: 20px auto;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          /* 수정: 세로 배치 */
-          align-items: flex-start;
-        }
-
-        .exp-cards-container {
-          position: relative;
-          width: 100%;
-          height: auto;
-          overflow: visible;
-          display: flex;
-          flex-direction: column;
-          /* 수정: 세로 배치 */
-          align-items: center;
-        }
-
-        .exp-card-frame {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0;
-          transition: transform 0.5s ease-in-out;
-          flex-direction: column;
-          /* 수정: 세로 배치 */
-        }
-
-        .exp-card {
-          width: 100%;
-          height: auto;
-          min-height: 300px;
-          transform: scale(1);
-          opacity: 1;
-          margin: 0;
-          padding: 20px;
-          box-sizing: border-box;
-          text-align: left;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          transition: all 0.5s ease-in-out;
-          flex: 0 0 100%;
-        }
-
-        .exp-card-period-wrapper {
-          width: fit-content;
-          min-width: 3.4rem;
-          height: 0.9rem;
-          border-radius: 0.4rem;
-          background: var(--main-organization-color);
-          margin: 0 auto 0.4rem;
-          padding: 0.1rem 0.5rem;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .exp-card-period {
-          color: var(--highlight-color);
-          font-size: 0.5rem;
-          line-height: normal;
-          white-space: nowrap;
-          letter-spacing: 0;
-        }
-
-        .exp-card-company,
-        .exp-card-term,
-        .exp-card-task-text,
-        .exp-card-task-term,
-        .exp-card-task-detail-text {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-
-        .exp-card-task,
-        .exp-card-task-detail {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-
-        .point {
-          margin-right: 0.5rem;
-          margin-top: 0.2rem;
-        }
-
-        #card1,
-        #card3 {
-          display: none;
-        }
-
-        .exp-prev,
-        .exp-next {
-          display: block;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 30px;
-          height: 30px;
-          z-index: 10;
-        }
-
-        .exp-prev {
-          left: -15px;
-        }
-
-        .exp-next {
-          right: -15px;
-        }
-
-        .proj-container {
-          flex-direction: column;
-          align-items: center;
-          gap: 1.6rem;
-        }
-
-        .proj {
-          width: 100%;
-          max-width: 400px;
-          margin: 0 auto;
-        }
-
-        .proj-main-img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          border-radius: 15px 15px 0 0;
-        }
-
-        .proj-content {
-          width: 100%;
-          height: auto;
-          padding: 15px;
-          background-color: var(--sub-organization-color);
-          border-radius: 0 0 15px 15px;
-        }
-
-        .proj-content-title {
-          font-size: 16px;
-          margin-bottom: 10px;
-        }
-
-        .proj-content-text {
-          font-size: 12px;
-          line-height: 1.4;
-        }
-
-        .info-detail {
-          justify-content: flex-start;
-        }
-
-        .info-detail-exp {
-          text-align: left;
-        }
-
-        .project-picture.center {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: auto;
-        }
-
-        .project-div-image {
-          width: 80%;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-          border-radius: 0.9rem;
-        }
+      .info-detail-exp {
+        text-align: left;
       }
 
-      .proj-title {
-        margin: 2rem 0;
-      }
-
-      .language-switch-floating {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-      }
-
-      .language-button {
+      .project-picture.center {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50px;
-        height: 50px;
-        background-color: var(--main-organization-color);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-size: 1rem;
+        width: 100%;
+        height: auto;
       }
 
-      .language-button:hover {
-        background-color: var(--sub-organization-color);
+      .project-div-image {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 0.9rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .language-button {
-          width: 75px;
-          height: 75px;
-          font-size: 1.5rem;
-        }
-      }
+    /* 링크 아이콘 */
+    .proj-content-title-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .proj-link-icon {
+        margin-left: 10px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .proj-link-img {
+        width: 20px;
+        height: 20px;
+    }
+
     </style>
   </head>
 
   <body class="w-full">
     <div class="background w-full">
       <div class="frame w-full">
+        <!-- side-bar -->
         <div class="side-bar">
           <img class="side-bar-logo w-full" src="image/basiclogo.svg" />
           <div class="side-bar-profile">
@@ -1336,10 +1477,8 @@
             />
           </div>
           <div class="name-tag">
-            <div class="name font-bold">Jiwung Choi</div>
-            <div class="sub-name font-regular">
-              Prompt Engineer<br />Developer
-            </div>
+            <div class="name font-bold">Trinity</div>
+            <div class="sub-name font-regular">Full Stack Dev</div>
           </div>
           <div class="info">
             <div class="info-detail">
@@ -1349,7 +1488,9 @@
                 color="red"
               ></object>
               <div class="info-detail-exp font-regular">
-                Job Introduction (e.g., Graphic & Branding Designer)
+        
+                ✅ I'm currently developing a full-stack mobile app using Flutter and Django. </br>
+                ✅ For side projects and prototypes, we use Flutter Flow.  
               </div>
             </div>
             <div class="info-detail">
@@ -1357,38 +1498,38 @@
                 class="info-detail-icon svg-filter"
                 src="image/detail-2.svg"
               />
-              <div class="info-detail-exp font-regular">
-                YYYY.MM.DD / Residence
-              </div>
+              <div class="info-detail-exp font-regular">Seoul, Korea</div>
             </div>
             <div class="info-detail">
               <img
                 class="info-detail-icon svg-filter"
                 src="image/detail-3.svg"
               />
-              <div class="info-detail-exp font-regular">E-mail Address</div>
+              <div class="info-detail-exp font-regular">
+                kyeongyeon.song@gmail.com
+              </div>
             </div>
-            <div class="info-detail">
+            <!-- <div class="info-detail">
               <img
                 class="info-detail-icon svg-filter"
                 src="image/detail-4.svg"
               />
-              <div class="info-detail-exp font-regular">Phone Number</div>
-            </div>
+              <div class="info-detail-exp font-regular">010-3789-3321</div>
+            </div> -->
           </div>
           <div class="line"></div>
           <div class="strength-set">
             <div class="strength">
               <img class="strength-img svg-filter" src="image/strength-1.png" />
-              <div class="strength-text font-regular">Communication</div>
+              <div class="strength-text font-regular">Problem Solver</div>
             </div>
             <div class="strength">
               <img class="strength-img svg-filter" src="image/strength-2.png" />
-              <div class="strength-text font-regular">Fast Work</div>
+              <div class="strength-text font-regular">Good Communication</div>
             </div>
             <div class="strength">
               <img class="strength-img svg-filter" src="image/strength-3.png" />
-              <div class="strength-text font-regular">Leadership</div>
+              <div class="strength-text font-regular">Creativity</div>
             </div>
           </div>
           <div class="line"></div>
@@ -1406,7 +1547,7 @@
                 <div class="point svg-filter"></div>
                 <div class="skill-text font-bold">HTML</div>
               </div>
-              <div class="skill-bar" data-progress="0">
+              <div class="skill-bar" data-progress="70">
                 <div class="skill-bar-progress">
                   <div class="skill-bar-rectangle"></div>
                   <div class="skill-bar-o1"></div>
@@ -1420,7 +1561,7 @@
                 <div class="point svg-filter"></div>
                 <div class="skill-text font-bold">CSS</div>
               </div>
-              <div class="skill-bar" data-progress="20">
+              <div class="skill-bar" data-progress="70">
                 <div class="skill-bar-progress">
                   <div class="skill-bar-rectangle"></div>
                   <div class="skill-bar-o1"></div>
@@ -1434,7 +1575,7 @@
                 <div class="point svg-filter"></div>
                 <div class="skill-text font-bold">JavaScript</div>
               </div>
-              <div class="skill-bar" data-progress="40">
+              <div class="skill-bar" data-progress="70">
                 <div class="skill-bar-progress">
                   <div class="skill-bar-rectangle"></div>
                   <div class="skill-bar-o1"></div>
@@ -1448,7 +1589,7 @@
                 <div class="point svg-filter"></div>
                 <div class="skill-text font-bold">React</div>
               </div>
-              <div class="skill-bar" data-progress="60">
+              <div class="skill-bar" data-progress="80">
                 <div class="skill-bar-progress">
                   <div class="skill-bar-rectangle"></div>
                   <div class="skill-bar-o1"></div>
@@ -1460,9 +1601,79 @@
             <div class="skill-item">
               <div class="skill-set">
                 <div class="point svg-filter"></div>
-                <div class="skill-text font-bold">Node.js</div>
+                <div class="skill-text font-bold">Flutter</div>
               </div>
-              <div class="skill-bar" data-progress="80">
+              <div class="skill-bar" data-progress="95">
+                <div class="skill-bar-progress">
+                  <div class="skill-bar-rectangle"></div>
+                  <div class="skill-bar-o1"></div>
+                  <div class="skill-bar-o2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-set">
+                <div class="point svg-filter"></div>
+                <div class="skill-text font-bold">Flutter Flow</div>
+              </div>
+              <div class="skill-bar" data-progress="85">
+                <div class="skill-bar-progress">
+                  <div class="skill-bar-rectangle"></div>
+                  <div class="skill-bar-o1"></div>
+                  <div class="skill-bar-o2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-set">
+                <div class="point svg-filter"></div>
+                <div class="skill-text font-bold">AWS</div>
+              </div>
+              <div class="skill-bar" data-progress="70">
+                <div class="skill-bar-progress">
+                  <div class="skill-bar-rectangle"></div>
+                  <div class="skill-bar-o1"></div>
+                  <div class="skill-bar-o2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-set">
+                <div class="point svg-filter"></div>
+                <div class="skill-text font-bold">Python</div>
+              </div>
+              <div class="skill-bar" data-progress="70">
+                <div class="skill-bar-progress">
+                  <div class="skill-bar-rectangle"></div>
+                  <div class="skill-bar-o1"></div>
+                  <div class="skill-bar-o2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-set">
+                <div class="point svg-filter"></div>
+                <div class="skill-text font-bold">Langchain</div>
+              </div>
+              <div class="skill-bar" data-progress="70">
+                <div class="skill-bar-progress">
+                  <div class="skill-bar-rectangle"></div>
+                  <div class="skill-bar-o1"></div>
+                  <div class="skill-bar-o2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-set">
+                <div class="point svg-filter"></div>
+                <div class="skill-text font-bold">Django</div>
+              </div>
+              <div class="skill-bar" data-progress="90">
                 <div class="skill-bar-progress">
                   <div class="skill-bar-rectangle"></div>
                   <div class="skill-bar-o1"></div>
@@ -1474,13 +1685,47 @@
           <div class="line"></div>
           <div class="license">
             <img class="license-img svg-filter" src="image/license.svg" />
-            <div class="license-title font-regular">LICENSE</div>
+            <div class="license-title font-regular">CERTIFICATES</div>
             <div class="license-wrap">
-              <div class="license-content w-full">
-                <div class="license-text font-bold">SQLD</div>
+              <div class="license-content">
+                <div
+                  class="license-text font-bold clickable"
+                  onclick="window.open('https://nomadcoders.co/certs/7e78b569-8719-4f9f-aab9-ca1492a0f588', '_blank')"
+                >
+                  Building Webtoon App with Flutter
+                </div>
               </div>
               <div class="license-content">
-                <div class="license-text font-bold">ADsP</div>
+                <div
+                  class="license-text font-bold clickable"
+                  onclick="window.open('https://nomadcoders.co/certs/7ac16ea7-fd3a-456f-b287-13c55f0de73a', '_blank')"
+                >
+                  Full Stack GPT
+                </div>
+              </div>
+              <div class="license-content">
+                <div
+                  class="license-text font-bold clickable"
+                  onclick="window.open('https://nomadcoders.co/certs/adfd3567-3b5e-4290-a595-043fb3acb006', '_blank')"
+                >
+                  Python 8-week course
+                </div>
+              </div>
+              <div class="license-content">
+                <div
+                  class="license-text font-bold clickable"
+                  onclick="window.open('https://nomadcoders.co/certs/3d8573db-d174-416b-ad5c-267e1297d111', '_blank')"
+                >
+                  Django 4-week course
+                </div>
+              </div>
+              <div class="license-content">
+                <div
+                  class="license-text font-bold clickable"
+                  onclick="window.open('https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/cert/img/nb_cert_667e273d1e629b67f0730409_6688fbc25d3eded60a62fdf8.jpg', '_blank')"
+                >
+                  Create AI app with No Code
+                </div>
               </div>
             </div>
           </div>
@@ -1491,298 +1736,351 @@
               <div class="education-text font-regular">EDUCATION</div>
             </div>
             <div class="education-content w-full">
-              <div class="education-name font-bold">Sparta High School</div>
+              <div class="education-name font-bold clickable" onclick="window.open('https://spartacodingclub.kr', '_blank')">Sparta Coding Club</div>
               <p class="education-detail font-regular">
-                2013.03.02 ~ 2016.02.14 / Jungnang-gu, Seoul
+                Online Course
               </p>
-              <div class="education-name font-bold">Sparta University</div>
+              <div class="education-name font-bold clickable" onclick="window.open('https://www.udemy.com/', '_blank')" >Udemy</div>
+              <p class="education-detail font-regular">Online Course</p>
+              
+              <div
+                class="education-name font-bold clickable"
+                onclick="window.open('https://nomadcoders.co/', '_blank')"
+              >
+                Nomad Coders
+              </div>
+              
+              <p class="education-detail font-regular">Online Course</p>
+              <div class="education-name font-bold">Sogang University</div>
               <p class="education-detail font-regular">
-                2016.03.02 ~ 2020.02.20 / GPA: 4.35 / Eunpyeong-gu, Seoul
+                Math+Computer / Seoul
               </p>
             </div>
           </div>
+          <div class="line"></div>
         </div>
-        <div class="main-content">
-          <div class="intro-div">
-            <div class="intro-frame">
-              <img class="intro-logo w-full" src="image/basiclogo.svg" />
-              <div class="intro-picture-frame">
-                <img class="intro-picture" src="image/profile_image.png" />
-              </div>
-              <div class="intro-row-line" src="image/row-line.svg"></div>
 
-              <div class="intro-row-line" style="top: 412px"></div>
-              <div class="intro-column-line"></div>
-              <div class="intro-column-line" style="left: 934px"></div>
-              <img class="intro-star svg-filter" src="image/star.svg" />
-              <div class="intro-content">
-                <img class="intro-quote svg-filter" src="image/quote.svg" />
-                <p class="intro-text font-bold">
-                  Passionate developer with a focus on creating innovative
-                  solutions
-                </p>
-                <p class="intro-text-detail font-regular">
-                  Dedicated to continuous learning and applying cutting-edge
-                  technologies to solve real-world problems
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="exp-div">
-            <div class="exp-title">
-              <img class="exp-img svg-filter" src="image/exp.svg" />
-              <div class="exp-text font-bold">EXPERIENCE</div>
-            </div>
-            <div class="exp-cards-container">
-              <div class="exp-card-frame flex-center size-full">
-                <div class="exp-card">
-                  <div class="exp-card-period-wrapper flex-center">
-                    <div class="exp-card-period font-regular">6 months</div>
-                  </div>
-                  <div class="exp-card-company font-bold">Company1</div>
-                  <div class="exp-card-term">2023.01~2023.06</div>
-                  <div class="exp-card-team">
-                    <div class="exp-card-team-name font-bold">
-                      Web Development Team, Junior
+        <!-- main content -->
+                    <div class="main-content">
+                <!-- 자기소개 div -->
+                <div class="intro-div">
+                    <div class="intro-frame">
+                        <img class="intro-logo w-full" src="image/basiclogo.svg" />
+                        <div class="intro-picture-frame">
+                            <img class="intro-picture" src="image/profile_image.png" />
+                        </div>
+                        <div class="intro-row-line"></div>
+
+                        <div class="intro-row-line" style="top: 412px"></div>
+                        <div class="intro-column-line"></div>
+                        <div class="intro-column-line" style="left: 934px"></div>
+                        <img class="intro-star svg-filter" src="image/star.svg" />
+                        <div class="intro-content">
+                            <img class="intro-quote svg-filter" src="image/quote.svg" />
+                            <p class="intro-text font-bold">
+                                 I'm Trinity, a developer who adapts quickly to change.
+                            </p>
+                            <p class="intro-text-detail font-regular">
+                                다이내믹한 기업 문화와 빠른 성장에 매력을 느꼈습니다.
+                                <br />저의 창의적이고 유연한 사고로 팀에 신선한 아이디어를
+                                제공하고 싶습니다. <br />함께 도전하고 성장하는 과정에서 큰
+                                성취를 이루고 싶습니다.
+                            </p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="exp-card-task">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-text font-regular">
-                      Frontend Development and Maintenance
-                    </div>
-                  </div>
-                  <div class="exp-card-proj">
-                    <div class="exp-card-proj-name font-bold">
-                      Customer Management System Improvement
-                    </div>
-                  </div>
-                  <div class="exp-card-task-term font-regular">
-                    2023.02~2023.05
-                  </div>
-                  <div class="exp-card-task-detail">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-detail-text font-regular">
-                      Dashboard UI improvement and performance optimization
-                      using React
-                    </div>
-                  </div>
                 </div>
-                <div class="exp-card">
-                  <div class="exp-card-period-wrapper flex-center">
-                    <div class="exp-card-period font-regular">4 months</div>
-                  </div>
-                  <div class="exp-card-company font-bold">Company2</div>
-                  <div class="exp-card-term">2022.08~2022.11</div>
-                  <div class="exp-card-team">
-                    <div class="exp-card-team-name font-bold">
-                      Backend Development Team, Intern
+                <!-- 경력 div -->
+                <div class="exp-div">
+                    <div class="exp-title">
+                        <img class="exp-img svg-filter" src="image/exp.svg" />
+                        <div class="exp-text font-bold">EXPERIENCE (Total 5+ years)</div>
                     </div>
-                  </div>
-                  <div class="exp-card-task">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-text font-regular">
-                      RESTful API Development and Database Management
+                    <div class="exp-cards-container">
+                       <div class="exp-card-frame flex-center size-full">
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">5 Months</div>
+                                </div>
+                                <div class="exp-card-company font-bold">
+                                    Trinity Lab
+                                </div>
+                                <div class="exp-card-term">2024.03 ~ Current</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                        Full-Stack Developer
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Full Stack Mobile App (Flutter, Django)
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">6 Months</div>
+                                </div>
+                                <div class="exp-card-company font-bold">
+                                    Davinci Apps
+                                </div>
+                                <div class="exp-card-term">2023.01~2023.06</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                          Full-Stack Developer
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        AI Contents & Web Apps (Next.js, Notion API, ChatGPT)
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Mobile App (Android, Kotlin, MVVM Clean Architecture)
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                          <div>
+                            <br> </br></p>
+                          </div>
+                        <div class="exp-card-frame flex-center size-full">
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">7 Months</div>
+                                </div>
+                                <div class="exp-card-company font-bold">
+                                   Eightmeals
+                                </div>
+                                <div class="exp-card-term">2023.06~2023.12</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                         Frontend Team, Tech Leader
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Store management ERP solution development (Flutter)
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Develop a franchisee recruitment website(Next.js)
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Table Order App Development (Flutter, Amplify)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">1 year 8 months</div>
+                                </div>
+                                <div class="exp-card-company font-bold">
+                                    E-woo Solutions
+                                </div>
+                                <div class="exp-card-term">2021.06~2023.01</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                        Frontend Team, Freelancer
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        Android App Development (Android, Kotlin, MVVM Clean Architecture)
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="exp-card">
+                                <div class="exp-card-period-wrapper flex-center">
+                                    <div class="exp-card-period font-regular">10 Months</div>
+                                </div>
+                                <div class="exp-card-company font-bold">Beyond Next</div>
+                                <div class="exp-card-term">2019.06~2020.03</div>
+                                <div class="exp-card-team">
+                                    <div class="exp-card-team-name font-bold">
+                                        Dev Team, Frontend Developer
+                                    </div>
+                                </div>
+                                <div class="exp-card-task">
+                                    <div class="point svg-filter"></div>
+                                    <div class="exp-card-task-text font-regular">
+                                        iOS App Development and Deployment (Swift)
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="exp-card-proj">
-                    <div class="exp-card-proj-name font-bold">
-                      Social Media Analysis Platform
-                    </div>
-                  </div>
-                  <div class="exp-card-task-term font-regular">
-                    2022.09~2022.11
-                  </div>
-                  <div class="exp-card-task-detail">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-detail-text font-regular">
-                      API development using Node.js and Express, and MongoDB
-                      integration
-                    </div>
-                  </div>
                 </div>
-                <div class="exp-card">
-                  <div class="exp-card-period-wrapper flex-center">
-                    <div class="exp-card-period font-regular">3 months</div>
-                  </div>
-                  <div class="exp-card-company font-bold">Company3</div>
-                  <div class="exp-card-term">2022.05~2022.07</div>
-                  <div class="exp-card-team">
-                    <div class="exp-card-team-name font-bold">
-                      Full-stack Development Team, Freelance
+
+                                <!-- 프로젝트 div -->
+                <div class="proj-div">
+                    <div class="proj-title">
+                        <img class="proj-title-img svg-filter" src="image/proj.svg" />
+                        <div class="proj-title-text font-bold">PROJECT</div>
                     </div>
-                  </div>
-                  <div class="exp-card-task">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-text font-regular">
-                      Web Application Development and Deployment
+                    <div class="proj-container">
+                      <div class="proj" onclick="location.href='project_en.html'">
+                            <img src="image/catbot_logo.webp" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                                <div class="proj-content-title font-bold">Catbot</div>
+                                <p class="proj-content-text font-regular">
+                                    This is a chatbot for fortune telling and tarot consultation using AI. A cute cat teacher will give you a fortune and tirelessly answer your endless questions. The service was developed after months of research with experts in logic and tarot, and the developers themselves have studied logic and tarot for many years. The tarot provides basic answers using the Universal Tarot, and the readings are organised into images, summaries, and a question and answer chat.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="proj" onclick="location.href='project_zennecting_en.html'">
+                            <img src="image/zennecting_logo.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                                <div class="proj-content-title font-bold">Zennecting</div>
+                                <p class="proj-content-text font-regular">
+                                    We aimed to develop a platform that connects yoga and meditation teachers with space operators and is also useful for the general public interested in yoga and meditation. You can easily search for yoga and meditation classes near you and rent space for teachers who need space. We used Django to develop the backend and Flutter to develop the mobile app. We deployed the backend on AWS.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="proj" onclick="location.href='project_vegan_en.html'">
+                            <img src="image/vegan_journey_screenshot.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                               <div class="proj-content-title-wrapper">
+                                  <div class="proj-content-title font-bold">Vegan Journey</div>
+                                  <a href="https://vegan-journey.trinity-app.com/" target="_blank" class="proj-link-icon" onclick="event.stopPropagation();">
+                                      <img src="image/external-link.svg" alt="바로가기" class="proj-link-img">
+                                  </a>
+                              </div>
+                                <p class="proj-content-text font-regular">
+                                    Vegan Journey is a website that features AI-generated images, recipes, and vegan travel courses around the world. It also uses AI to generate recipes. The content is available in both Korean and English. The website is built with Next.js and utilises Notion DB and API as the backend. It uses ChatGPT to generate content and OpenAI API to generate recipes.
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="proj" onclick="location.href='project_aroma_en.html'">
+                            <img src="image/aroma_journey_screenshot.png" alt="프로젝트 이미지" class="proj-main-img" />
+                            <div class="proj-content">
+                                <div class="proj-content-title-wrapper">
+                                  <div class="proj-content-title font-bold">Aroma Journey</div>
+                                  <a href="https://aroma.trinity-app.com/" target="_blank" class="proj-link-icon" onclick="event.stopPropagation();">
+                                      <img src="image/external-link.svg" alt="바로가기" class="proj-link-img">
+                                  </a>
+                              </div>
+                                <p class="proj-content-text font-regular">
+                                    Aroma Journey is a website that provides AI-generated images, descriptions of essential oils, and recommendations for essential oils based on symptoms. The content is available in both Korean and English. It was built with Next.js and utilised Notion DB and API as the backend. ChatGPT was used to generate content. 
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="exp-card-proj">
-                    <div class="exp-card-proj-name font-bold">
-                      Online Learning Platform Development
-                    </div>
-                  </div>
-                  <div class="exp-card-task-term font-regular">
-                    2022.05~2022.07
-                  </div>
-                  <div class="exp-card-task-detail">
-                    <div class="point svg-filter"></div>
-                    <div class="exp-card-task-detail-text font-regular">
-                      Full-stack web application development using React and
-                      Django
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="proj-div">
-            <div class="proj-title">
-              <img class="proj-title-img svg-filter" src="image/proj.svg" />
-              <div class="proj-title-text font-bold">PROJECT</div>
-            </div>
-            <div class="proj-container">
-              <div
-                class="proj"
-                onclick="location.href='project_en.html?lang=en'"
-              >
-                <img
-                  src="image/p1.png"
-                  alt="Project Image"
-                  class="proj-main-img"
-                />
-                <div class="proj-content">
-                  <div class="proj-content-title font-bold">Project1</div>
-                  <p class="proj-content-text font-regular">
-                    A community platform for international students to share
-                    information and network. Developed using React and Node.js,
-                    featuring bulletin boards, real-time chat, and event
-                    management.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="proj"
-                onclick="location.href='project2_en.html?lang=en'"
-              >
-                <img
-                  src="image/p2.png"
-                  alt="Project Image"
-                  class="proj-main-img"
-                />
-                <div class="proj-content">
-                  <div class="proj-content-title font-bold">Project2</div>
-                  <p class="proj-content-text font-regular">
-                    A collaboration platform for developers to manage projects
-                    and support teamwork. Built with React and Node.js,
-                    featuring code review, real-time chat, and issue tracking.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
-    </div>
-    <div class="language-switch-floating">
-      <button
-        onclick="location.href='index.html?lang=ko'"
-        class="language-button font-regular"
-      >
-        KO
-      </button>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        setupSkillBars();
-        setLanguageAndMode();
-      });
-
-      function setLanguageAndMode() {
-        const lang = getUrlParameter("lang") || "ko";
-        const mode = getUrlParameter("mode");
-        const currentPage = window.location.pathname.split("/").pop();
-        const isCorrectPage =
-          (lang === "en" && currentPage === "index_en.html") ||
-          (lang === "ko" && currentPage === "index.html");
-
-        if (!isCorrectPage) {
-          const targetPage = lang === "en" ? "index_en.html" : "index.html";
-          const queryString = [];
-          if (lang) queryString.push(`lang=${lang}`);
-          if (mode) queryString.push(`mode=${mode}`);
-          const queryPart =
-            queryString.length > 0 ? `?${queryString.join("&")}` : "";
-          window.location.href = targetPage + queryPart;
-          return;
-        }
-
-        // 모드 설정 (기존 코드 유지)
-        if (mode === "sparta") {
-          document.documentElement.style.setProperty(
-            "--main-organization-color",
-            "#E8344E"
-          );
-          document.documentElement.style.setProperty(
-            "--sub-organization-color",
-            "#FAD6DC"
-          );
-          document.documentElement.style.setProperty(
-            "--main-svg-filter",
-            "invert(30%) sepia(44%) saturate(5563%) hue-rotate(335deg) brightness(96%) contrast(89%)"
-          );
-          updateLogos("image/sparta-logo.png");
-        }
-      }
-
-      function getUrlParameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-        var results = regex.exec(location.search);
-        return results === null
-          ? ""
-          : decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-
-      function getUpdatedQueryString(lang, mode) {
-        let queryString = "";
-        if (mode) {
-          queryString += `?mode=${mode}`;
-        }
-        return queryString;
-      }
-
-      function updateLogos(logoSrc) {
-        const sideBarLogo = document.querySelector(".side-bar-logo");
-        const introLogo = document.querySelector(".intro-logo");
-
-        if (sideBarLogo) {
-          sideBarLogo.src = logoSrc;
-        }
-        if (introLogo) {
-          introLogo.src = logoSrc;
-        }
-      }
-
-      function setupSkillBars() {
-        const skillBars = document.querySelectorAll(".skill-bar");
-        skillBars.forEach((bar) => {
-          const progress = bar.getAttribute("data-progress");
-          bar.style.setProperty("--progress", progress);
-
-          const progressBar = bar.querySelector(".skill-bar-progress");
-          progressBar.style.width = `calc((100% - 14px) * ${progress} / 100)`;
-
-          const rectangle = bar.querySelector(".skill-bar-rectangle");
-          rectangle.style.width = `calc(100% - 5px)`;
-
-          const o1 = bar.querySelector(".skill-bar-o1");
-          const o2 = bar.querySelector(".skill-bar-o2");
-          o1.style.left = `calc(100% - 14px)`;
-          o2.style.left = `calc(100% - 11px)`;
+        <div class="language-switch-floating">
+    <button onclick="location.href='index_en.html?lang=en'" class="language-button font-regular">
+      EN
+    </button>
+  </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          setupSkillBars();
+          setLanguageAndMode();
         });
+
+        function setupSkillBars() {
+          const skillBars = document.querySelectorAll(".skill-bar");
+          skillBars.forEach((bar) => {
+            const progress = bar.getAttribute("data-progress");
+            bar.style.setProperty("--progress", progress);
+
+            const progressBar = bar.querySelector(".skill-bar-progress");
+            progressBar.style.width = `calc((100% - 14px) * ${progress} / 100)`;
+
+            const rectangle = bar.querySelector(".skill-bar-rectangle");
+            rectangle.style.width = `calc(100% - 5px)`;
+
+            const o1 = bar.querySelector(".skill-bar-o1");
+            const o2 = bar.querySelector(".skill-bar-o2");
+            o1.style.left = `calc(100% - 14px)`;
+            o2.style.left = `calc(100% - 11px)`;
+          });
+        }
+
+            function setLanguageAndMode() {
+      const lang = getUrlParameter("lang") || "ko";
+      const mode = getUrlParameter("mode");
+      const currentPage = window.location.pathname.split("/").pop();
+      const isCorrectPage =
+        (lang === "en" && currentPage === "index_en.html") ||
+        (lang === "ko" && currentPage === "index.html");
+
+      if (!isCorrectPage) {
+        const targetPage = lang === "en" ? "index_en.html" : "index.html";
+        const queryString = [];
+        if (lang) queryString.push(`lang=${lang}`);
+        if (mode) queryString.push(`mode=${mode}`);
+        const queryPart = queryString.length > 0 ? `?${queryString.join("&")}` : "";
+        window.location.href = targetPage + queryPart;
+        return;
       }
-    </script>
+
+      // 모드 설정 (기존 코드 유지)
+      if (mode === "sparta") {
+        document.documentElement.style.setProperty(
+          "--main-organization-color",
+          "#E8344E"
+        );
+        document.documentElement.style.setProperty(
+          "--sub-organization-color",
+          "#FAD6DC"
+        );
+        document.documentElement.style.setProperty(
+          "--main-svg-filter",
+          "invert(30%) sepia(44%) saturate(5563%) hue-rotate(335deg) brightness(96%) contrast(89%)"
+        );
+        updateLogos("image/sparta-logo.png");
+      }
+    }
+
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+      var results = regex.exec(location.search);
+      return results === null
+        ? ""
+        : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function getUpdatedQueryString(lang, mode) {
+      let queryString = "";
+      if (mode) {
+        queryString += `?mode=${mode}`;
+      }
+      return queryString;
+    }
+
+    function updateLogos(logoSrc) {
+      const sideBarLogo = document.querySelector(".side-bar-logo");
+      const introLogo = document.querySelector(".intro-logo");
+
+      if (sideBarLogo) {
+        sideBarLogo.src = logoSrc;
+      }
+      if (introLogo) {
+        introLogo.src = logoSrc;
+      }
+    }
+      </script>
+    </div>
   </body>
 </html>
